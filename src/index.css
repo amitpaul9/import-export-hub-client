@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  background: #f1f4f7;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+label {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+input::placeholder {
+  color: #344e4130;
+}
