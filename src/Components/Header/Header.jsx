@@ -27,11 +27,11 @@ const Navbar = () => {
   ]
 
   return (
-    <div className="navbar shadow-sm bg-white rounded-bl-2xl rounded-br-2xl p-5" >
+    <div className="navbar shadow-sm bg-white rounded-b-2xl rounded-br-2xl p-5" >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} className="lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="#F4CF89" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
           </div>
           <ul
             tabIndex="-1"
@@ -39,10 +39,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link className=" text-xl" to="/"><div className=' flex justify-center items-center gap-2'><FaShoppingBag className='fill-[#F4CF89] w-12 h-12' /><h1 className='font-bold'>Import Export Hub</h1></div></Link>
+        <Link className=" text-xl" to="/"><div className=' flex justify-center items-center gap-2'><FaShoppingBag className='fill-[#F4CF89] w-12 h-12' /><h1 className='font-bold '>Import Export Hub</h1></div></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-[#344e41]">
+        <ul className="menu menu-horizontal px-1 font-semibold text-[#313B50]">
           {links}
         </ul>
       </div>
@@ -57,8 +57,8 @@ const Navbar = () => {
           </ul>
         </div></div>
         : <div className="navbar-end ">
-          <Link className="btn bg-[#344e41] text-white mr-2" to="/login">Login</Link>
-          <Link className='btn border-2 border-[#344e41] bg-white' to="/register">Register</Link>
+          <Link className="btn bg-[#F4CF89] text-[#313B50]  mr-2" to="/login">Login</Link>
+          <Link className='btn border-2 border-[#F4CF89] text-[#313B50] bg-white' to="/register">Register</Link>
         </div>}
     </div>
   );

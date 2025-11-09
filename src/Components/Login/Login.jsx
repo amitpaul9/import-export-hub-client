@@ -68,12 +68,12 @@ const Login = () => {
     return (
         <div className=''>
             <div className=" min-h-screen text-black ">
-                <title>Login-GreenNest</title>
+                <title>Login-Import Export Hub</title>
                 <div className="flex justify-center flex-col items-center">
                     <div className="text-center mt-8">
-                        <h1 className="text-3xl w-4xl bg-white p-3 rounded-2xl font-bold mb-2">Login</h1>
+                        <h1 className="text-3xl lg:w-4xl bg-white p-3 rounded-2xl font-bold mb-2 w-sm md:w-3xl">Login</h1>
                     </div>
-                    <div className='flex  px-7 py-9 rounded-xl w-4xl justify-center gap-3 bg-white shadow-sm'>
+                    <div className='flex lg:flex-row md:flex-row flex-col md:px-5 md:py-7 lg:px-7 lg:py-9 rounded-xl w-sm md:w-3xl lg:w-4xl justify-center gap-3 bg-white shadow-sm'>
                         <div className=" w-full max-w-sm shrink-0 ">
                             <div className="card-body">
                                 <form onSubmit={handleLogin}>
@@ -127,7 +127,7 @@ const Login = () => {
                             </div>
 
                         </div>
-                        <img className='max-w-sm rounded-2xl' src="/public/assets/loginpic.png" alt="" />
+                        <img className='max-w-sm rounded-2xl hidden md:block lg:block' src="/public/assets/loginpic.png" alt="" />
                     </div>
                 </div>
             </div>

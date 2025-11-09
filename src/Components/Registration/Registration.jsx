@@ -108,12 +108,12 @@ const Registration = () => {
 
     return (
         <div className=" min-h-screen text-black ">
-            <title>Registration-GreenNests</title>
+            <title>Registration-Import Export Hub</title>
             <div className="flex justify-center flex-col items-center">
                 <div className="text-center mt-8">
-                    <h1 className="text-3xl w-4xl bg-white p-3 rounded-2xl font-bold mb-2">Resgitration</h1>
+                    <h1 className="text-3xl w-sm md:w-3xl lg:w-4xl bg-white p-3 rounded-2xl font-bold mb-2">Resgitration</h1>
                 </div>
-                <div className="card bg-white  w-4xl shrink-0 shadow-sm">
+                <div className="card bg-white md:w-3xl w-sm lg:w-4xl shrink-0 shadow-sm">
                     <div className="card-body">
                         <form onSubmit={handleRegister}>
                             <fieldset className="fieldset">
