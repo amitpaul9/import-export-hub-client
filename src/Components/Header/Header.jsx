@@ -48,7 +48,6 @@ const Navbar = () => {
       </div>
       {user ? <div className='navbar-end'>
 
-
         {/* dropdown  */}
         <div className="dropdown dropdown-end">
           <div tabIndex={0} className=" mr-5 border-2 border-[#F4CF89] rounded-full"><img className='h-12 w-12 rounded-full' src={user.photoURL} alt="" /></div>
