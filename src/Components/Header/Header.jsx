@@ -20,10 +20,10 @@ const Navbar = () => {
   }
 
   const links = [
-    <li className='mr-4'><NavLink to="/">All Products</NavLink></li>,
-    <li className='mr-4'><NavLink to='/'>My Exports</NavLink></li>,
-    <li className='mr-4'><NavLink to="/profile">My Imports</NavLink></li>,
-    <li className='mr-4'><NavLink to="/">Add Export</NavLink></li>
+    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10] '><NavLink to="/">All Products</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10]'><NavLink to='/'>My Exports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10]'><NavLink to="/profile">My Imports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10]'><NavLink to="/addtoexport">Add Export</NavLink></li>
   ]
 
   return (
@@ -57,8 +57,8 @@ const Navbar = () => {
           </ul>
         </div></div>
         : <div className="navbar-end ">
-          <Link className="btn bg-[#F4CF89] text-[#313B50]  mr-2" to="/login">Login</Link>
-          <Link className='btn border-2 border-[#F4CF89] text-[#313B50] bg-white' to="/register">Register</Link>
+          <Link className="btn bg-[#F4CF89] hover:transform-3d hover:border-[#F4CF10] hover:bg-white text-[#313B50]  mr-2" to="/login">Login</Link>
+          <Link className='btn border-2 border-[#F4CF89] hover:transform-3d hover:bg-[#F4CF10] text-[#313B50] bg-white' to="/register">Register</Link>
         </div>}
     </div>
   );
