@@ -5,6 +5,7 @@ import HeroBanner from '../../HeroBanner/HeroBanner';
 
 const Home = () => {
 
+
     const [products, setProducts] = useState([]);
     const { setLoader } = useContext(ImportExportHubContext);
 
@@ -14,7 +15,7 @@ const Home = () => {
             .then(data => {
                 setProducts(data);
                 setLoader(false)
-         
+
             })
     }, [])
     console.log(products)
