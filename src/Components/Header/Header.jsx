@@ -20,18 +20,18 @@ const Navbar = () => {
   }
 
   const links = [
-    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10] '><NavLink to="/">All Products</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10]'><NavLink to='/'>My Exports</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10]'><NavLink to="/profile">My Imports</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:bg-[#F4CF10]'><NavLink to="/addtoexport">Add Export</NavLink></li>
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black '><NavLink to="/">All Products</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to='/'>My Exports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to="/profile">My Imports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black'><NavLink to="/addtoexport">Add Export</NavLink></li>
   ]
 
   return (
-    <div className="navbar shadow-sm bg-white rounded-b-2xl rounded-br-2xl p-5" >
-      <div className="navbar-start">
+    <div className="navbar sticky top-0  shadow-sm bg-white text-black rounded-b-2xl rounded-br-2xl p-5" >
+      <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} className="lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="#F4CF89" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="indigo-900" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
           </div>
           <ul
             tabIndex="-1"
@@ -39,10 +39,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link className=" text-xl" to="/"><div className=' flex justify-center items-center gap-2'><FaShoppingBag className='fill-[#F4CF89] w-12 h-12' /><h1 className='font-bold '>Import Export Hub</h1></div></Link>
+        <Link className=" text-xl" to="/"><div className=' flex justify-center items-center gap-2'><FaShoppingBag className='fill-indigo-900 w-12 h-12' /><h1 className='font-bold text-black'>Import Export Hub</h1></div></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-semibold text-[#313B50]">
+        <ul className=" menu-horizontal px-1 text-white">
           {links}
         </ul>
       </div>
@@ -57,8 +57,8 @@ const Navbar = () => {
           </ul>
         </div></div>
         : <div className="navbar-end ">
-          <Link className="btn bg-[#F4CF89] hover:transform-3d hover:border-[#F4CF10] hover:bg-white text-[#313B50]  mr-2" to="/login">Login</Link>
-          <Link className='btn border-2 border-[#F4CF89] hover:transform-3d hover:bg-[#F4CF10] text-[#313B50] bg-white' to="/register">Register</Link>
+          <Link className="btn hover:transform-3d bg-gradient-to-r  from-gray-900 to-indigo-900 text-white hover:bg-white text-[#313B50]  mr-2" to="/login">Login</Link>
+          <Link className='btn border-2  hover:transform-3d border-indigo-900 text-[#313B50] bg-white' to="/register">Register</Link>
         </div>}
     </div>
   );

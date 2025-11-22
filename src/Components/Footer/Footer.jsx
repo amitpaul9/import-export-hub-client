@@ -4,7 +4,7 @@ import { FaSquareFacebook, FaSquarePinterest } from 'react-icons/fa6';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-horizontal footer-center text-base-content rounded p-8 shadow-sm rounded-t-2xl bg-white ">
+        <footer className="mt-5 footer footer-horizontal footer-center text-white rounded p-8 shadow-sm rounded-t-2xl bg-gradient-to-b from-gray-900 to-indigo-900 ">
             <nav className="grid grid-flow-col gap-4">
                 <a className="link link-hover">About us</a>
                 <a className="link link-hover">Contact</a>
