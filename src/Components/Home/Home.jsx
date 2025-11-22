@@ -14,6 +14,7 @@ const Home = () => {
             .then(data => {
                 setProducts(data);
                 setLoader(false)
+         
             })
     }, [])
     console.log(products)
