@@ -57,7 +57,7 @@ const RecentProducts = () => {
 
             {products.map(product => <div className=" card bg-base-100 w-96 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-indigo-900 hover:text-white cursor-pointer">
                 <figure>
-                    <img className='h-[250px] w-auto p-3 rounded-2xl'
+                    <img className='h-[250px] w-[450px] p-3 rounded-2xl'
                         src={product.productImage}
                         alt="produc image" />
                 </figure>

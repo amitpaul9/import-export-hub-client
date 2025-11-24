@@ -13,9 +13,14 @@ const AddExports = () => {
         const quantity = e.target.quantity.value;
         const photo = e.target.photo.value;
 
-        const newUser = {
-            name, photo, price, origin, ratings, quantity
+        const newExport = {
+
+            productName: name, productImage: photo,
+            price: price,
+            originCountry
+                : origin, rating: ratings, availableQuantity: quantity, createdDate: new Date()
         }
+        e.target.reset()
 
 
         fetch('http://localhost:3000/exports', {
@@ -23,7 +28,7 @@ const AddExports = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newUser)
+            body: JSON.stringify(newExport)
         })
             .then(res => res.json())
             .then(data => {
