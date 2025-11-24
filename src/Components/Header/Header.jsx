@@ -20,14 +20,14 @@ const Navbar = () => {
   }
 
   const links = [
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black '><NavLink to="/">All Products</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black '><NavLink to="/allproducts">All Products</NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to='/'>My Exports</NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to="/profile">My Imports</NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black'><NavLink to="/addtoexport">Add Export</NavLink></li>
   ]
 
   return (
-    <div className="navbar sticky top-0  shadow-sm bg-white text-black rounded-b-2xl rounded-br-2xl p-5" >
+    <div className="navbar shadow-sm bg-white text-black rounded-b-2xl rounded-br-2xl p-5" >
       <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} className="lg:hidden">
@@ -50,8 +50,8 @@ const Navbar = () => {
 
         {/* dropdown  */}
         <div className="dropdown dropdown-end">
-          <div tabIndex={0} className=" mr-5 border-2 border-[#F4CF89] rounded-full"><img className='h-12 w-12 rounded-full' src={user.photoURL} alt="" /></div>
-          <ul tabIndex="-1" className="dropdown-content menu bg-[#F4CF89] font-bold rounded-box z-1 w-52 p-2 shadow-sm">
+          <div tabIndex={0} className=" mr-5 border-2 border-indigo-900 rounded-full"><img className='h-12 w-12 rounded-full' src={user.photoURL} alt="" /></div>
+          <ul tabIndex="-1" className="dropdown-content menu bg-indigo-900 text-white font-bold rounded-box z-1 w-52 p-2 shadow-sm">
             <li><p><CgProfile /> {user.displayName}</p></li>
             <li><Link onClick={handleSignOut}><CiLogout /> Logout</Link></li>
           </ul>

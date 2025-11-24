@@ -5,6 +5,8 @@ import Registration from "../Components/Registration/Registration";
 import Home from "../Components/Home/Home";
 import AddExports from "../Components/AddExports/AddExports";
 import PrivateRouter from "../Routes/PrivetRouter.jsx"
+import ProductsDetails from "../ProductsDetails/ProductsDetails.jsx";
+import AllProducs from "../AllProducts/AllProducs.jsx";
 
 
 export const router = createBrowserRouter([
@@ -27,6 +29,15 @@ export const router = createBrowserRouter([
       {
         path: "/addtoexport",
         element: <PrivateRouter><AddExports></AddExports></PrivateRouter>
+      },
+      {
+        path: "/products-details/:id",
+        loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`),
+        element: <PrivateRouter><ProductsDetails></ProductsDetails></PrivateRouter>
+      },
+      {
+        path: "/allproducts",
+        Component: AllProducs
       }
 
     ]

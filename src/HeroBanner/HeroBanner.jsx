@@ -6,8 +6,8 @@ import { VscWorkspaceTrusted } from 'react-icons/vsc';
 
 const HeroBanner = () => {
     return (
-        <div className='flex gap-3 p-10 bg-white mt-5 w-full justify-between'>
-            <div className='mt-4'>
+        <div className='flex gap-3 p-10 bg-white w-full justify-between'>
+            <div className='mt-5'>
                 <h1 className='font-extrabold text-3xl text-black'>Trade Globally, Grow Locall | Connect <br /> with verified suppliers & buyers </h1>
                 <p className='mt-2 text-[#1a237e80]'>"Expand your business globally. Find verified suppliers, reach new customers, trade with confidence."</p>
                 <div className='flex gap-5 items-center pt-6'>

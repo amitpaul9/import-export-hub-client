@@ -7,7 +7,7 @@ const ImportExportHubProvider = ({ children }) => {
 
     const [authLoading, setAuthLoading] = useState(true);
     const [user, setUser] = useState(null);
-    const [loader, setLoader] = useState(null);
+    const [loader, setLoader] = useState(false);
 
 
     const signupUser = (email, password) => {
@@ -32,7 +32,7 @@ const ImportExportHubProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
-            setLoader(false);
+            setLoader(false)
             setAuthLoading(false);
         })
         return () => {
@@ -60,9 +60,9 @@ const ImportExportHubProvider = ({ children }) => {
 
 
     return (
-        <div>
-            <ImportExportHubContext value={info}>{children}</ImportExportHubContext>
-        </div>
+
+        <ImportExportHubContext.Provider value={info}>{children}</ImportExportHubContext.Provider>
+
     );
 };
 
