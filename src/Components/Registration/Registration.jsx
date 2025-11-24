@@ -74,6 +74,24 @@ const Registration = () => {
                     .catch(error => console.log(error))
 
 
+                    // save user to the database 
+
+                const newUser = {
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    image: result.user.photoURL
+                }
+
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(newUser)
+                }).then(res => res.json()).then(data => console.log(data)).catch(error => console.log("got error of", error))
+
+
+
                 e.target.reset();
                 natigate("/");
 
@@ -100,6 +118,25 @@ const Registration = () => {
             .then(res => {
                 console.log(res);
                 natigate("/");
+
+
+                // save user to the database 
+
+                const newUser = {
+                    name: res.user.displayName,
+                    email: res.user.email,
+                    image: res.user.photoURL
+                }
+
+
+
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(newUser)
+                }).then(res => res.json()).then(data => console.log(data)).catch(error => console.log("got error of", error))
             })
             .catch(err => console.log(err))
     }

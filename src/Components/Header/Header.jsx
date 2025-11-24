@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="dropdown dropdown-end">
           <div tabIndex={0} className=" mr-5 border-2 border-indigo-900 rounded-full"><img className='h-12 w-12 rounded-full' src={user.photoURL} alt="" /></div>
           <ul tabIndex="-1" className="dropdown-content menu bg-indigo-900 text-white font-bold rounded-box z-1 w-52 p-2 shadow-sm">
-            <li><p><CgProfile /> {user.displayName}</p></li>
+            <li><Link to="/"><CgProfile /> {user.displayName}</Link></li>
             <li><Link onClick={handleSignOut}><CiLogout /> Logout</Link></li>
           </ul>
         </div></div>

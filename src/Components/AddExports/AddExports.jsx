@@ -42,7 +42,7 @@ const AddExports = () => {
         <div className='flex justify-center mt-5 mb-8 flex-col text-center items-center'>
             <h1 className="fieldset-legend text-2xl">Add to Export</h1>
             <form onSubmit={handleAddExports}>
-                <fieldset className="fieldset bg-white border-base-300 rounded-box w-sm md:w-lg  lg:w-lg border p-4">
+                <fieldset className="fieldset bg-white border-base-300 rounded-box  lg:w-lg md:w-lg border p-4">
 
                     <label className="label">Product Name</label>
                     <input type="text" name='name' className="input w-full" placeholder="Your product name" />
@@ -65,7 +65,7 @@ const AddExports = () => {
                     <label className="label">Available quantity</label>
                     <input type="number" name='quantity' className="input w-full" placeholder="Available quantity your product" />
 
-                    <button className="btn bg-[#F4CF89] hover:transform-3d hover:bg-[#F4CF10]  mt-4">Add Export</button>
+                    <button className="btn text-white bg-gradient-to-r  from-gray-900 to-indigo-900  mt-4">Add Export</button>
                 </fieldset>
             </form>
         </div >

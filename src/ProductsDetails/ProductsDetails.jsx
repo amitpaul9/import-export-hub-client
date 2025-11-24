@@ -6,7 +6,7 @@ const ProductsDetails = () => {
     console.log(product);
 
     return (
-        <div className='p-8 flex gap-12 '>
+        <div className='p-8 flex lg:flex-row md:flex-row flex-col gap-3 md:gap-5 lg:gap-12 '>
             <div>
                 <img className='w-[800px] h-[400px]' src={product.productImage} alt="" />
             </div>
@@ -31,7 +31,7 @@ const ProductsDetails = () => {
                 <div className='mt-8 '>
                     <Link className='rounded-lg w-full px-5 py-2 text-white bg-gradient-to-r  from-gray-900 to-indigo-900'>Import Now</Link>
                 </div>
-                
+
 
             </div>
         </div>
