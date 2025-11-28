@@ -7,6 +7,8 @@ import AddExports from "../Components/AddExports/AddExports";
 import PrivateRouter from "../Routes/PrivetRouter.jsx"
 import ProductsDetails from "../ProductsDetails/ProductsDetails.jsx";
 import AllProducs from "../AllProducts/AllProducs.jsx";
+import MyExports from "../MyExports/MyExports.jsx";
+import MyImports from "../MyImports/MyImports.jsx";
 
 
 export const router = createBrowserRouter([
@@ -38,6 +40,14 @@ export const router = createBrowserRouter([
       {
         path: "/allproducts",
         Component: AllProducs
+      },
+      {
+        path: "/myimports",
+        element: <PrivateRouter><MyImports></MyImports></PrivateRouter>
+      },
+      {
+        path: "myexports",
+        element: <PrivateRouter><MyExports></MyExports></PrivateRouter>
       }
 
     ]

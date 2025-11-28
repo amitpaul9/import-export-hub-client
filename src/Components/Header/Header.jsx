@@ -20,9 +20,10 @@ const Navbar = () => {
   }
 
   const links = [
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black '><NavLink to="/">Home</NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black '><NavLink to="/allproducts">All Products</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to='/'>My Exports</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to="/profile">My Imports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to='/myexports'>My Exports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900  text-black'><NavLink to="/myimports">My Imports</NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 text-black'><NavLink to="/addtoexport">Add Export</NavLink></li>
   ]
 

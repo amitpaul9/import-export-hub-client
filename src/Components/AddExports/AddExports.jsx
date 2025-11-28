@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import { ImportExportHubContext } from "../../../Contexts/importExportHubContext";
+import Swal from "sweetalert2";
 
 
 const AddExports = () => {
 
-
+    const { user } = useContext(ImportExportHubContext)
 
     const handleAddExports = (e) => {
         e.preventDefault();
@@ -16,9 +19,7 @@ const AddExports = () => {
         const newExport = {
 
             productName: name, productImage: photo,
-            price: price,
-            originCountry
-                : origin, rating: ratings, availableQuantity: quantity, createdDate: new Date()
+            price: price, originCountry: origin, rating: ratings, availableQuantity: quantity, createdDate: new Date(), exporter_email: user.email, exporter_name: user.displayName, exporter_image: user.photoURL
         }
         e.target.reset()
 
@@ -33,6 +34,11 @@ const AddExports = () => {
             .then(res => res.json())
             .then(data => {
                 console.log("after saving user", data);
+                Swal.fire({
+                    title: "Success!",
+                    text: "Your export has been added!",
+                    icon: "success"
+                });
             })
     }
 

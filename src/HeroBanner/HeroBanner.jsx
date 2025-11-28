@@ -3,6 +3,7 @@ import { GrSecure } from 'react-icons/gr';
 import { MdSupportAgent } from 'react-icons/md';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { VscWorkspaceTrusted } from 'react-icons/vsc';
+import { Link } from 'react-router';
 
 const HeroBanner = () => {
     return (
@@ -11,7 +12,7 @@ const HeroBanner = () => {
                 <h1 className='font-extrabold text-3xl text-black'>Trade Globally, Grow Locall | Connect <br /> with verified suppliers & buyers </h1>
                 <p className='mt-2 text-[#1a237e80]'>"Expand your business globally. Find verified suppliers, reach new customers, trade with confidence."</p>
                 <div className='flex gap-5 items-center pt-6'>
-                    <h3 className='btn rounded-4xl bg-gradient-to-r  from-gray-900 to-indigo-900 px-7 hover:bg-white hover:border-indigo-900 hover:text-white text-white '>Register</h3>
+                    <Link to='/register' className='btn rounded-4xl bg-gradient-to-r  from-gray-900 to-indigo-900 px-7 hover:bg-white hover:border-indigo-900 hover:text-white text-white '>Register</Link>
                     <h3 className='btn rounded-4xl border-indigo-900 px-7 text-indigo-900 hover:bg-indigo-900 hover:text-white hover:border-none bg-white'>Learn More</h3>
                 </div>
                 <div className="divider mt-5"></div>
