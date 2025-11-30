@@ -8,6 +8,19 @@ const ImportExportHubProvider = ({ children }) => {
     const [authLoading, setAuthLoading] = useState(true);
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(false);
+    const [theme, setTheme] = useState('light');
+
+    //theme toggle function is inspired by online resourses
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prevTheme => {
+            const newTheme = prevTheme === 'light' ? 'synthwave' : 'light';
+            return newTheme;
+        });
+    };
 
 
     const signupUser = (email, password) => {
@@ -50,7 +63,9 @@ const ImportExportHubProvider = ({ children }) => {
         setUser,
         authLoading,
         signinwithGoogle,
-        setLoader
+        setLoader,
+        theme,
+        toggleTheme
 
 
     }

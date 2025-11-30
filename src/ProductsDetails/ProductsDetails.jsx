@@ -72,6 +72,7 @@ const ProductsDetails = () => {
                 <h1 className='text-2xl mt-3 mb-2 font-bold'>{product.productName}</h1>
                 <div className='bg-[#1a237e20] py-2 px-5 w-full rounded-lg'>
                     <h1 className='text-indigo-900 text-xl font-bold'>Product Details</h1>
+
                     <div className='text-left mt-2'>
                         <p className='  '>Price: ${product.price}</p>
                         <h3 className=''>Available Quantity: {product.availableQuantity}</h3>
@@ -93,6 +94,8 @@ const ProductsDetails = () => {
                     <dialog className="modal modal-bottom sm:modal-middle" ref={importModalRef}>
                         <div className="modal-box ">
                             <h3 className="font-bold text-lg text-center">Enter info</h3>
+                            <div className='flex justify-self-end'><button className='btn btn-xs  ' onClick={() => importModalRef.current.close()}>❌</button></div>
+
                             <div className="modal-action flex flex-row justify-center">
                                 <form method="dialog" onSubmit={handleImport}>
                                     <fieldset className="fieldset rounded-box w-xs p-4">
@@ -110,6 +113,7 @@ const ProductsDetails = () => {
                                     </fieldset>
 
                                 </form>
+
                             </div>
                         </div>
                     </dialog>

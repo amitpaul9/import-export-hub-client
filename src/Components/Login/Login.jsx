@@ -110,7 +110,7 @@ const Login = () => {
                                             <p className="text-green-500">Account Create successfully</p>
                                         )}
                                         {error && <p className="text-red-500">{error}</p>}
-                                        <button className="btn mt-4 bg-gradient-to-r  from-gray-900 to-indigo-900 text-white ">Login</button>
+                                        <button className="btn mt-4 bg-gradient-to-r  from-gray-900 to-indigo-900 text-white  ">Login</button>
                                     </fieldset>
 
                                 </form>

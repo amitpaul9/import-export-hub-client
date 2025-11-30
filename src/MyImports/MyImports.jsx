@@ -59,7 +59,7 @@ const MyImports = () => {
 
 
         <div>
-            <h1 className='text-center text-white text-2xl m-3 rounded-b-2xl bg-gradient-to-r  from-gray-900 to-indigo-900 py-4'>Your Imports</h1>
+            <h2 className='text-center text-white text-2xl m-3 rounded-b-2xl bg-gradient-to-r  from-gray-900 to-indigo-900 py-4'>Your Imports</h2>
 
             {imports.length === 0 ? (
                 <div className="text-center text-indigo-900 text-xl mt-20">
@@ -79,16 +79,16 @@ const MyImports = () => {
                                     alt="Avatar Tailwind CSS Component" />
                             </div>
 
-                            <div><div className="font-bold lg:text-xl md:text-xl text-xs"><h1>{importedItem.product_name}</h1></div>
+                            <div><div className="font-bold lg:text-xl md:text-xl text-xs"><h2>{importedItem.product_name}</h2></div>
                                 <div className="text-sm opacity-50"><p>Origin: {importedItem.product_origin}</p></div>
                             </div>
 
-                            <div><h1 className='lg:text-xl md:text-xl text-[10px]'>Quantity: {importedItem.import_quantity}</h1></div>
+                            <div><h2 className='lg:text-xl md:text-xl text-[10px]'>Quantity: {importedItem.import_quantity}</h2></div>
 
                             <div><p className='lg:text-xl md:text-xl text-[10px]'>Price: {importedItem.product_price}</p></div>
 
 
-                            <div> <h1 className='lg:text-xl md:text-xl text-[10px]'>Rating: {importedItem.product_rating}</h1></div>
+                            <div> <h2 className='lg:text-xl md:text-xl text-[10px]'>Rating: {importedItem.product_rating}</h2></div>
 
                             <div><button onClick={() => handleImportDelete(importedItem._id)} className='text-2xl cursor-pointer' >❌</button></div>
                         </div>

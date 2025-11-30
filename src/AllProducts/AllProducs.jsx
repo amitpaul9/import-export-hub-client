@@ -5,12 +5,19 @@ import { Link } from 'react-router';
 const AllProducs = () => {
     const [products, setProducts] = useState([]);
     const { setLoader, loader } = useContext(ImportExportHubContext);
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState("")
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        setSearch(e.target.value);
+    }
+
+    const filteredProducts = products.filter(product => product.productName?.toLowerCase().includes(search.toLowerCase()))
+
 
     useEffect(() => {
         setLoader(true);
         fetch('http://localhost:3000/products')
-        
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -20,10 +27,7 @@ const AllProducs = () => {
     }, [])
 
 
-     const handleSearch = (e)=>{
-            e.preventDefault();
-            
-        }
+
 
 
     //loader is made with AI
@@ -57,7 +61,7 @@ const AllProducs = () => {
             </div>
         );
 
-       
+
 
     }
     return (
@@ -80,7 +84,7 @@ const AllProducs = () => {
                                 <path d="m21 21-4.3-4.3"></path>
                             </g>
                         </svg>
-                        <input type="search" required placeholder="Search" />
+                        <input onChange={handleSearch} type="search" required placeholder="Search" />
                     </label>
                 </div>
 
@@ -88,7 +92,7 @@ const AllProducs = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-5 '>
 
-                {products.map(product => <div className=" card bg-base-100 w-96 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-indigo-900 hover:text-white cursor-pointer">
+                {filteredProducts.length > 0 ? (filteredProducts.map(product => <div className=" card bg-base-100 w-96 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-indigo-900 hover:text-white cursor-pointer">
                     <figure>
                         <img className='h-[250px] w-[450px] p-3 rounded-2xl'
                             src={product.productImage}
@@ -108,7 +112,7 @@ const AllProducs = () => {
                             <Link to={`/products-details/${product._id}`} className='w-full border border-white text-center py-2 bg-indigo-900 text-white hover:bg-white hover:text-indigo-950 hover:transform-3d'>See Details</Link>
                         </div>
                     </div>
-                </div>)}
+                </div>)) : <h1 className='text-xl text-center text-red-600'>No product Available</h1>}
             </div>
 
         </div>
