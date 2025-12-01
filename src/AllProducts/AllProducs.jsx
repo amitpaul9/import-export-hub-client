@@ -68,7 +68,7 @@ const AllProducs = () => {
         <div className='mx-auto flex flex-col items-center'>
             <title>All Products - IE Hub</title>
             <h1 className='text-2xl text-indigo-900 font-bold mt-5 underline'>All Available Products</h1>
-            <div className='flex items-center justify-between lg:px-[150px] w-full '>
+            <div className='flex  items-center justify-between lg:px-[150px] w-full '>
                 <div> <h1 className='font-bold'>Available Products: <span className='text-indigo-900'>{products.length}</span></h1></div>
 
                 <div>
@@ -91,7 +91,7 @@ const AllProducs = () => {
 
 
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-5 '>
+            <div className='grid grid-cols-1 mb-8 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-5 '>
 
                 {filteredProducts.length > 0 ? (filteredProducts.map(product => <div className=" card bg-base-100 w-96 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-indigo-900 hover:text-white cursor-pointer">
                     <figure>

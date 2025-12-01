@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ImportExportHubContext } from '../../Contexts/importExportHubContext';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router';
+
 
 const MyImports = () => {
     const { user } = useContext(ImportExportHubContext)
@@ -90,7 +92,9 @@ const MyImports = () => {
 
 
                             <div> <h2 className='lg:text-xl md:text-xl text-[10px]'>Rating: {importedItem.product_rating}</h2></div>
-
+                            <div>
+                                <Link to={`/products-details/${importedItem.product_id}`} className=" px-5 py-2 rounded-lg bg-gradient-to-r from-gray-900 to-indigo-900 ">See Details</Link>
+                            </div>
                             <div><button onClick={() => handleImportDelete(importedItem._id)} className='text-2xl cursor-pointer' >❌</button></div>
                         </div>
 

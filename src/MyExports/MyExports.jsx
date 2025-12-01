@@ -102,7 +102,7 @@ const MyExports = () => {
                                 <p className="opacity-50">Origin: {exportedItem.originCountry}</p>
                             </div>
 
-                            <p>Qty: {exportedItem.availableQuantity}</p>
+                            <p>Available Qty: {exportedItem.availableQuantity}</p>
                             <p>Price: {exportedItem.price}</p>
                             <p>Rating: {exportedItem.rating}</p>
 
@@ -124,32 +124,33 @@ const MyExports = () => {
 
             {/* MODAL OUTSIDE MAP */}
             <dialog ref={importModalRef} className="modal modal-bottom sm:modal-middle">
-                <div className="modal-box">
+                <div className="modal-box ">
                     <h3 className="font-bold text-center text-black">Update Product</h3>
+                    <div className='flex justify-self-end'><button className='btn btn-xs  ' onClick={() => importModalRef.current.close()}>❌</button></div>
 
                     {selectedExport && (
                         <form onSubmit={(e) => handleExportUpdate(e, selectedExport._id)}>
-                            <fieldset className="fieldset p-4 text-black">
+                            <fieldset className="fieldset p-4 text-black ">
                                 <label className="label">Product Name</label>
-                                <input defaultValue={selectedExport.productName} name="name" className="input" />
+                                <input defaultValue={selectedExport.productName} name="name" className="input w-full" />
 
                                 <label className="label">Photo URL</label>
-                                <input defaultValue={selectedExport.productImage} name="photo" className="input" />
+                                <input defaultValue={selectedExport.productImage} name="photo" className="input w-full" />
 
                                 <label className="label">Price</label>
-                                <input defaultValue={selectedExport.price} name="price" className="input" />
+                                <input defaultValue={selectedExport.price} name="price" className="input w-full" />
 
                                 <label className="label">Origin</label>
-                                <input defaultValue={selectedExport.originCountry} name="origin" className="input" />
+                                <input defaultValue={selectedExport.originCountry} name="origin" className="input w-full" />
 
                                 <label className="label">Rating</label>
-                                <input defaultValue={selectedExport.rating} name="ratings" className="input" />
+                                <input defaultValue={selectedExport.rating} name="ratings" className="input w-full" />
 
                                 <label className="label">Quantity</label>
-                                <input defaultValue={selectedExport.availableQuantity} name="quantity" className="input" />
+                                <input defaultValue={selectedExport.availableQuantity} name="quantity" className="input w-full" />
 
-                                <button className="mt-3 btn bg-indigo-900 text-white">Update</button>
-                                <button type="button" className="btn btn-xs" onClick={() => importModalRef.current.close()}>Close</button>
+                                <button className="mt-3 btn bg-indigo-900 text-white">Submit</button>
+
                             </fieldset>
                         </form>
                     )}
