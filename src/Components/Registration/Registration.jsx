@@ -160,6 +160,7 @@ const Registration = () => {
                                 {/* NAme  */}
                                 <label className="label">Name</label>
                                 <input
+                                    required
                                     type="text"
                                     className="input bg-white w-full"
                                     placeholder='Your Name'
@@ -168,7 +169,8 @@ const Registration = () => {
                                 {/* photo url  */}
                                 <label className="label">Photo URL</label>
                                 <input
-                                    type="text"
+                                    required
+                                    type="url"
                                     className="input bg-white w-full"
                                     placeholder='Your Photo URL'
                                     name="photo"
@@ -176,6 +178,7 @@ const Registration = () => {
                                 {/* email  */}
                                 <label className="label">Email</label>
                                 <input
+                                    required
                                     type="email"
                                     className="input bg-white w-full"
                                     placeholder='Your Email'
@@ -185,6 +188,7 @@ const Registration = () => {
                                 <label className="label">Password</label>
                                 <div className="relative">
                                     <input
+                                        required
                                         type={showpass ? "text" : "password"}
                                         className="input bg-white w-full"
                                         placeholder='Password'

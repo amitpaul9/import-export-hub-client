@@ -62,7 +62,7 @@ const Login = () => {
                 navigate(location.state || '/');
                 toast.success('Login Successfull')
             })
-            .catch(err => console.log(err))
+            .catch(err => { console.log(err) })
     }
 
 
@@ -88,6 +88,7 @@ const Login = () => {
                                             className="input bg-white"
                                             ref={emailref}
                                             name="email"
+
                                         />
                                         {/* password  */}
                                         <label className="label">Password</label>
