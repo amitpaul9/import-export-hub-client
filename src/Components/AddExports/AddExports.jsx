@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 const AddExports = () => {
 
     const { user } = useContext(ImportExportHubContext)
+   
 
     const handleAddExports = (e) => {
         e.preventDefault();
@@ -19,7 +20,7 @@ const AddExports = () => {
         const newExport = {
 
             productName: name, productImage: photo,
-            price: price, originCountry: origin, rating: ratings, availableQuantity: quantity, createdDate: new Date(), exporter_email: user.email, exporter_name: user.displayName, exporter_image: user.photoURL
+            price: price, originCountry: origin, rating: ratings, availableQuantity: parseInt(quantity), createdDate: new Date(), exporter_email: user.email, exporter_name: user.displayName, exporter_image: user.photoURL
         }
         e.target.reset()
 

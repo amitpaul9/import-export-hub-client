@@ -5,34 +5,33 @@ import Swal from 'sweetalert2';
 
 
 const ProductsDetails = () => {
-    const product = useLoaderData();
-    console.log(product);
+    const loadedProduct = useLoaderData();
+    const [product, setproduct] = useState(loadedProduct);
     const importModalRef = useRef(null);
 
     const { user } = useContext(ImportExportHubContext);
     const [isDisable, setIsDisable] = useState(false);
+
 
     const handleImportModal = () => {
         importModalRef.current.showModal();
     }
 
     const handleImportButtonDisable = (e) => {
-        e.preventDefault();
         const quantity = parseInt(e.target.value) || 0;
-        if (product.availableQuantity < quantity) {
+        if (quantity > product.availableQuantity || quantity <= 0) {
             setIsDisable(true)
         }
         else {
             setIsDisable(false)
         }
-
     }
 
     const handleImport = (e) => {
         e.preventDefault();
         const email = user.email;
         const name = user.displayName;
-        const quantity = e.target.quantity.value;
+        const quantity = parseInt(e.target.quantity.value)
 
 
 
@@ -48,6 +47,11 @@ const ProductsDetails = () => {
             body: JSON.stringify(newImport)
         }).then(res => res.json()).then(data => {
             console.log('after submiting import', data);
+
+            setproduct(prevProduct => ({
+                ...prevProduct,
+                availableQuantity: prevProduct.availableQuantity - quantity
+            }))
             importModalRef.current.close();
 
 
@@ -106,7 +110,7 @@ const ProductsDetails = () => {
                                         <input type="text" className="input" defaultValue={user.email} readOnly />
 
                                         <label className="label">Quantity</label>
-                                        <input onChange={handleImportButtonDisable} type="number" name='quantity' className="input" placeholder='Enter Import Quantity' />
+                                        <input required onChange={handleImportButtonDisable} type="number" name='quantity' className="input" placeholder='Enter Import Quantity' />
                                         <button disabled={isDisable} className={`mt-3 btn text-white ${isDisable ? 'bg-gray-400' : 'bg-gradient-to-r from-gray-900 to-indigo-900'}`} > Import</button>
 
 
