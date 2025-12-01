@@ -78,13 +78,13 @@ const Navbar = () => {
           {/* dropdown  */}
           <div className="dropdown dropdown-end">
             <div tabIndex={0} className=" mr-5 border-2 border-indigo-900 rounded-full"><img className='h-12 w-12 rounded-full' src={user.photoURL} alt="" /></div>
-            <ul tabIndex="-1" className="dropdown-content menu bg-indigo-900 text-white font-bold rounded-box z-1 w-52 p-2 shadow-sm">
+            <ul tabIndex="-1" className="dropdown-content menu bg-indigo-900 text-white font-bold roundedP-box z-1 w-52 p-2 shadow-sm">
               <li><Link to="/"><CgProfile /> {user.displayName}</Link></li>
               <li><Link onClick={handleSignOut}><CiLogout /> Logout</Link></li>
             </ul>
           </div></div>
           : <div className="navbar-end ">
-            <Link className="btn hover:transform-3d bg-gradient-to-r  from-gray-900 to-indigo-900 text-white hover:bg-white   mr-2" to="/login">Login</Link>
+            <Link className="btn hover:transform-3d bg-gradient-to-r  from-gray-900 to-indigo-900 text-white   mr-2" to="/login">Login</Link>
             <Link className='btn border-2  hover:transform-3d border-indigo-900  bg-white' to="/register">Register</Link>
           </div>}
       </div>

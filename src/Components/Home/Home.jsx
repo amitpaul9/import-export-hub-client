@@ -16,6 +16,7 @@ const Home = () => {
         <>
 
             <div className='mx-auto flex flex-col items-center'>
+                <title>Home - IE Hub</title>
                 <HeroBanner></HeroBanner>
                 <BrowseByCategory></BrowseByCategory>
                 <h1 className='text-center text-indigo-900 font-bold text-3xl mt-9 underline'>Recent Products</h1>

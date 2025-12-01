@@ -4,6 +4,7 @@ import { updateProfile } from 'firebase/auth';
 import { auth } from '../../../Firebase/Firebase.config';
 import { FaEye, FaRegEyeSlash } from 'react-icons/fa6';
 import { ImportExportHubContext } from '../../../Contexts/importExportHubContext';
+import { toast } from 'react-toastify';
 
 const Registration = () => {
 
@@ -66,6 +67,7 @@ const Registration = () => {
             .then(result => {
                 setSuccess(true);
                 console.log("afer creating a user", result.user);
+                toast.success('Registration successfull')
 
                 updateProfile(auth.currentUser, profile)
                     .then(() => {
@@ -74,7 +76,7 @@ const Registration = () => {
                     .catch(error => console.log(error))
 
 
-                    // save user to the database 
+                // save user to the database 
 
                 const newUser = {
                     name: result.user.displayName,
@@ -117,6 +119,7 @@ const Registration = () => {
         signinwithGoogle()
             .then(res => {
                 console.log(res);
+                toast.success('Resgistration Successfull')
                 natigate("/");
 
 
@@ -145,7 +148,7 @@ const Registration = () => {
 
     return (
         <div className=" min-h-screen text-black ">
-            <title>Registration-Import Export Hub</title>
+            <title>Regitration - IE Hub</title>
             <div className="flex justify-center flex-col items-center">
                 <div className="text-center mt-8">
                     <h1 className="text-3xl w-sm md:w-3xl lg:w-4xl bg-white p-3 rounded-2xl font-bold mb-2">Resgitration</h1>

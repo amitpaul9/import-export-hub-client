@@ -62,6 +62,6 @@ li a.active::after {
   color: white;
 }
 
-[data-theme="light"] .navbar a {
+[data-theme="light"] li {
   color: #000000;
 }

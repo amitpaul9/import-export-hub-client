@@ -2,7 +2,7 @@ import React from 'react';
 
 const BrowseByCategory = () => {
     return (
-        <div className='py-16 px-5 border border-gray-100 lg:w-7xl rounded-2xl'>
+        <div className='py-16 px-5 border border-gray-100 bg-[#1a237e05] lg:w-7xl rounded-2xl'>
             <div className='max-w-6xl mx-auto'>
                 <h2 className='text-3xl font-bold text-center text-indigo-900 mb-10'>
                     Browse by Category

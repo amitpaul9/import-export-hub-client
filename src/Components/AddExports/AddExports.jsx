@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const AddExports = () => {
 
     const { user } = useContext(ImportExportHubContext)
-   
+
 
     const handleAddExports = (e) => {
         e.preventDefault();
@@ -47,6 +47,7 @@ const AddExports = () => {
 
     return (
         <div className='flex justify-center mt-5 mb-8 flex-col text-center items-center'>
+            <title>Add Exports - IE Hub</title>
             <h1 className="fieldset-legend text-2xl">Add to Export</h1>
             <form onSubmit={handleAddExports}>
                 <fieldset className="fieldset bg-white border-base-300 rounded-box  lg:w-lg md:w-lg border p-4">
@@ -66,7 +67,7 @@ const AddExports = () => {
 
 
                     <label className="label">Ratings</label>
-                    <input type="number" name='ratings' className="input w-full" placeholder="Your product rating (1 to 5)" />
+                    <input step={0.1} min={0.1} max={5} type="number" name='ratings' className="input w-full" placeholder="Your product rating (1 to 5)" />
 
 
                     <label className="label">Available quantity</label>

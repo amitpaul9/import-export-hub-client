@@ -9,12 +9,14 @@ import ProductsDetails from "../ProductsDetails/ProductsDetails.jsx";
 import AllProducs from "../AllProducts/AllProducs.jsx";
 import MyExports from "../MyExports/MyExports.jsx";
 import MyImports from "../MyImports/MyImports.jsx";
+import ErrorPage from "../ErrorPage/ErrorPage.jsx";
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,

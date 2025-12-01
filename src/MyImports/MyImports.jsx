@@ -59,6 +59,7 @@ const MyImports = () => {
 
 
         <div>
+            <title>My Imports - IE Hub</title>
             <h2 className='text-center text-white text-2xl m-3 rounded-b-2xl bg-gradient-to-r  from-gray-900 to-indigo-900 py-4'>Your Imports</h2>
 
             {imports.length === 0 ? (

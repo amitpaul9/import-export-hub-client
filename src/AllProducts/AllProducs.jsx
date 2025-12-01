@@ -66,6 +66,7 @@ const AllProducs = () => {
     }
     return (
         <div className='mx-auto flex flex-col items-center'>
+            <title>All Products - IE Hub</title>
             <h1 className='text-2xl text-indigo-900 font-bold mt-5 underline'>All Available Products</h1>
             <div className='flex items-center justify-between lg:px-[150px] w-full '>
                 <div> <h1 className='font-bold'>Available Products: <span className='text-indigo-900'>{products.length}</span></h1></div>

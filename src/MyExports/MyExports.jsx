@@ -79,6 +79,7 @@ const MyExports = () => {
 
     return (
         <div>
+            <title>My Exports - IE Hub</title>
             <h2 className='text-center text-white text-2xl m-3 rounded-b-2xl bg-gradient-to-r from-gray-900 to-indigo-900 py-4'>
                 Your Exports
             </h2>
@@ -115,7 +116,7 @@ const MyExports = () => {
                                 Update
                             </Link>
 
-                            <button className="text-2xl" onClick={() => handleImportDelete(exportedItem._id)}>❌</button>
+                            <button className="cursor-pointer text-2xl" onClick={() => handleImportDelete(exportedItem._id)}>❌</button>
                         </div>
                     </div>
                 ))

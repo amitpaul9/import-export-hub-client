@@ -69,6 +69,7 @@ const ProductsDetails = () => {
 
     return (
         <div className='p-8 flex lg:flex-row md:flex-row flex-col gap-3 md:gap-5 lg:gap-12 '>
+            <title>Product - IE Hub</title>
             <div>
                 <img className='w-[800px] h-[400px]' src={product.productImage} alt="" />
             </div>

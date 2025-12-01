@@ -37,6 +37,7 @@ const Login = () => {
                 setSuccess(true);
                 e.target.reset();
                 navigate(location.state || '/');
+                toast.success("Login Successfull")
             })
             .catch(error => {
                 setError("Wrong email or password");
@@ -59,6 +60,7 @@ const Login = () => {
             .then(res => {
                 console.log(res);
                 navigate(location.state || '/');
+                toast.success('Login Successfull')
             })
             .catch(err => console.log(err))
     }
@@ -67,8 +69,9 @@ const Login = () => {
 
     return (
         <div className=''>
+            <title>Login - IE Hub</title>
             <div className=" min-h-screen text-black ">
-                <title>Login-Import Export Hub</title>
+
                 <div className="flex justify-center flex-col items-center">
                     <div className="text-center mt-8">
                         <h1 className="text-3xl lg:w-4xl bg-white p-3 rounded-2xl font-bold mb-2 w-sm md:w-3xl">Login</h1>
