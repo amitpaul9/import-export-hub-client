@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* theme toggle */}
-      <div className='navbar-end flex gap-8 lg:gap-3 items-center'>
+      <div className='navbar-end flex gap-12 lg:gap-3 items-center'>
         <div className='text-center'>
           <label className=" toggle toggle-xs lg:toggle-lg  text-base-content">
             <input
