@@ -25,7 +25,7 @@ const AddExports = () => {
         e.target.reset()
 
 
-        fetch('http://localhost:3000/exports', {
+        fetch('https://import-export-hub-server-lake.vercel.app/exports', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -30,7 +30,7 @@ const MyExports = () => {
             exporter_image: user.photoURL,
         };
 
-        fetch(`http://localhost:3000/exports/${_id}`, {
+        fetch(`https://import-export-hub-server-lake.vercel.app/exports/${_id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedExport)
@@ -52,7 +52,7 @@ const MyExports = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:3000/exports?exporter_email=${user.email}`)
+            fetch(`https://import-export-hub-server-lake.vercel.app/exports?exporter_email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setExport(data));
         }
@@ -65,7 +65,7 @@ const MyExports = () => {
             showCancelButton: true
         }).then((res) => {
             if (res.isConfirmed) {
-                fetch(`http://localhost:3000/exports/${id}`, { method: "DELETE" })
+                fetch(`https://import-export-hub-server-lake.vercel.app/exports/${id}`, { method: "DELETE" })
                     .then(res => res.json())
                     .then(data => {
                         if (data.deletedCount) {
@@ -90,7 +90,7 @@ const MyExports = () => {
                 </div>
             ) : (
                 exports.map((exportedItem) => (
-                    <div key={exportedItem._id} className="m-3 rounded-2xl bg-indigo-900 text-white p-3">
+                    <div key={exportedItem._id} className="overflow-hidden m-2 lg:m-3 md:m-3 rounded-2xl lg:text-xl md:text-xl text-[8px] bg-indigo-900 text-white p-3">
                         <div className="flex justify-evenly items-center gap-5">
                             <img className="mask mask-squircle h-12 w-12"
                                 src={exportedItem.productImage}
@@ -98,7 +98,7 @@ const MyExports = () => {
                             />
 
                             <div>
-                                <h2 className="font-bold">{exportedItem.productName}</h2>
+                                <h2 className="font-bold ">{exportedItem.productName}</h2>
                                 <p className="opacity-50">Origin: {exportedItem.originCountry}</p>
                             </div>
 
@@ -111,12 +111,12 @@ const MyExports = () => {
                                     setSelectedExport(exportedItem);
                                     handleExportModal();
                                 }}
-                                className="px-5 py-2 rounded-lg bg-gradient-to-r from-gray-900 to-indigo-900"
+                                className="lg:px-5 lg:py-2 md:px-5 md:py-2  py-2 text-[10px] md:rounded-lg md:bg-gradient-to-r lg:rounded-lg lg:bg-gradient-to-r from-gray-900 to-indigo-900"
                             >
                                 Update
                             </Link>
 
-                            <button className="cursor-pointer text-2xl" onClick={() => handleImportDelete(exportedItem._id)}>❌</button>
+                            <button className="cursor-pointer md:text-xl lg:text-2xl text-[12px]" onClick={() => handleImportDelete(exportedItem._id)}>❌</button>
                         </div>
                     </div>
                 ))

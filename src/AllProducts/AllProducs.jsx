@@ -17,7 +17,7 @@ const AllProducs = () => {
 
     useEffect(() => {
         setLoader(true);
-        fetch('http://localhost:3000/products')
+        fetch('https://import-export-hub-server-lake.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -69,11 +69,11 @@ const AllProducs = () => {
             <title>All Products - IE Hub</title>
             <h1 className='text-2xl text-indigo-900 font-bold mt-5 underline'>All Available Products</h1>
             <div className='flex  items-center justify-between lg:px-[150px] w-full '>
-                <div> <h1 className='font-bold'>Available Products: <span className='text-indigo-900'>{products.length}</span></h1></div>
+                <div> <h1 className='font-bold text-[12px] md:text-xl lg:text-xl '>Available Products: <span className='text-indigo-900'>{products.length}</span></h1></div>
 
                 <div>
                     <label className="input">
-                        <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <svg className="lg:h-[1em] h-1 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g
                                 strokeLinejoin="round"
                                 strokeLinecap="round"
@@ -93,7 +93,7 @@ const AllProducs = () => {
             </div>
             <div className='grid grid-cols-1 mb-8 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-5 '>
 
-                {filteredProducts.length > 0 ? (filteredProducts.map(product => <div className=" card bg-base-100 w-96 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-indigo-900 hover:text-white cursor-pointer">
+                {filteredProducts.length > 0 ? (filteredProducts.map(product => <div className=" card bg-base-100 w-90 md:w-96 lg:w-96 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-indigo-900 hover:text-white cursor-pointer">
                     <figure>
                         <img className='h-[250px] w-[450px] p-3 rounded-2xl'
                             src={product.productImage}

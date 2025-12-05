@@ -23,11 +23,11 @@ const Navbar = () => {
   }
 
   const links = [
-    <li className='mr-4 hover:transform-3d text-white hover:text-indigo-900 text-black '><NavLink to="/">Home</NavLink></li>,
-    <li className='mr-4 hover:transform-3d text-white hover:text-indigo-900 text-black '><NavLink to="/allproducts">All Products</NavLink></li>,
-    <li className='mr-4 hover:transform-3d text-white hover:text-indigo-900  text-black'><NavLink to='/myexports'>My Exports</NavLink></li>,
-    <li className='mr-4 hover:transform-3d text-white hover:text-indigo-900  text-black'><NavLink to="/myimports">My Imports</NavLink></li>,
-    <li className='mr-4 hover:transform-3d text-white hover:text-indigo-900 text-black'><NavLink to="/addtoexport">Add Export</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/">Home</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/allproducts">All Products</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white   text-black'><NavLink to='/myexports'>My Exports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white   text-black'><NavLink to="/myimports">My Imports</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black'><NavLink to="/addtoexport">Add Export</NavLink></li>,
 
   ]
 
@@ -52,10 +52,10 @@ const Navbar = () => {
         </ul>
       </div>
 
-
-      <div className='navbar-end flex gap-8 items-center'>
-        <div className=''>
-          <label className="toggle text-base-content">
+      {/* theme toggle */}
+      <div className='navbar-end flex gap-8 lg:gap-3 items-center'>
+        <div className='text-center'>
+          <label className=" toggle toggle-xs lg:toggle-lg  text-base-content">
             <input
               type="checkbox"
               checked={theme === 'synthwave'}
@@ -84,8 +84,8 @@ const Navbar = () => {
             </ul>
           </div></div>
           : <div className="navbar-end ">
-            <Link className="btn hover:transform-3d bg-gradient-to-r  from-gray-900 to-indigo-900 text-white   mr-2" to="/login">Login</Link>
-            <Link className='btn border-2  hover:transform-3d border-indigo-900  bg-white' to="/register">Register</Link>
+            <Link className="btn lg:btn-lg btn-xs  hover:transform-3d bg-gradient-to-r  from-gray-900 to-indigo-900 text-white   mr-2" to="/login">Login</Link>
+            <Link className='btn border-2 lg:btn-lg btn-xs  hover:transform-3d border-indigo-900  bg-white' to="/register">Register</Link>
           </div>}
       </div>
 

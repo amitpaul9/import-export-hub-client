@@ -18,9 +18,9 @@ const ErrorPage = () => {
                     <div className="min-h-screen flex items-center justify-center p-4">
                         <div className="text-center">
                             {/* Icon */}
-                            <div className="flex justify-center mb-8">
+                            <div className="flex justify-center">
                                 <svg
-                                    className="w-40 h-40 text-indigo-400 animate-bounce"
+                                    className="w-30 h-30 text-indigo-400 animate-bounce"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -35,13 +35,13 @@ const ErrorPage = () => {
                             </div>
 
                             {/* 404 Text */}
-                            <h1 className="text-9xl font-bold text-white mb-4 text-">404</h1>
+                            <h1 className="text-9xl font-bold  mb-4 text-black">404</h1>
                             <p className="text-2xl text-gray-300 mb-8">Page Not Found</p>
 
                             {/* Button */}
                             <button
                                 onClick={() => navigate('/')}
-                                className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+                                className="cursor-pointer px-8 py-3 bg-indigo-900 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-300"
                             >
                                 Go Home
                             </button>

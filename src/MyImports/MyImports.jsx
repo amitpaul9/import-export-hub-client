@@ -10,7 +10,7 @@ const MyImports = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:3000/imports?email=${user.email}`)
+            fetch(`https://import-export-hub-server-lake.vercel.app/imports?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
@@ -32,7 +32,7 @@ const MyImports = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/imports/${_id}`, {
+                fetch(`https://import-export-hub-server-lake.vercel.app/imports/${_id}`, {
                     method: 'DELETE',
 
                 })
@@ -73,7 +73,7 @@ const MyImports = () => {
                 imports.map(importedItem => (<div>
 
 
-                    <div className="overflow-hidden m-3 rounded-2xl text-white bg-indigo-900 mb-5 py-3 px-2 items-center justify-center">
+                    <div className="overflow-hidden m-2 lg:m-3 md:m-3 rounded-2xl lg:text-xl md:text-xl text-[8px] rounded-2xl text-white bg-indigo-900 mb-5 py-3 px-2 items-center justify-center">
 
                         <div className='flex justify-evenly gap-5 items-center'>
                             <div className=" h-12 w-12">
@@ -93,9 +93,9 @@ const MyImports = () => {
 
                             <div> <h2 className='lg:text-xl md:text-xl text-[10px]'>Rating: {importedItem.product_rating}</h2></div>
                             <div>
-                                <Link to={`/products-details/${importedItem.product_id}`} className=" px-5 py-2 rounded-lg bg-gradient-to-r from-gray-900 to-indigo-900 ">See Details</Link>
+                                <Link to={`/products-details/${importedItem.product_id}`} className=" lg:px-5 lg:py-2 md:px-5 md:py-2  py-2 text-[10px] md:rounded-lg md:bg-gradient-to-r lg:rounded-lg lg:bg-gradient-to-r from-gray-900 to-indigo-900 ">See Details</Link>
                             </div>
-                            <div><button onClick={() => handleImportDelete(importedItem._id)} className='text-2xl cursor-pointer' >❌</button></div>
+                            <div><button onClick={() => handleImportDelete(importedItem._id)} className='md:text-xl lg:text-2xl text-[12px] cursor-pointer' >❌</button></div>
                         </div>
 
 

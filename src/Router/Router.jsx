@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/products-details/:id",
-        loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`),
+        loader: ({ params }) => fetch(`https://import-export-hub-server-lake.vercel.app/products/${params.id}`),
         element: <PrivateRouter><ProductsDetails></ProductsDetails></PrivateRouter>
       },
       {

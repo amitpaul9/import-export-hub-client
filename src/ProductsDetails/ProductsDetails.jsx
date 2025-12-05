@@ -39,7 +39,7 @@ const ProductsDetails = () => {
             product_image: product.productImage, product_rating: product.rating, product_origin: product.originCountry, product_price: product.price, product_id: product._id, email: email, name: name, import_quantity: quantity, product_name: product.productName
         }
 
-        fetch('http://localhost:3000/imports', {
+        fetch('https://import-export-hub-server-lake.vercel.app/imports', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

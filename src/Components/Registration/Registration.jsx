@@ -84,7 +84,7 @@ const Registration = () => {
                     image: result.user.photoURL
                 }
 
-                fetch('http://localhost:3000/users', {
+                fetch('https://import-export-hub-server-lake.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         "content-type": "application/json"
@@ -133,7 +133,7 @@ const Registration = () => {
 
 
 
-                fetch('http://localhost:3000/users', {
+                fetch('https://import-export-hub-server-lake.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         "content-type": "application/json"
