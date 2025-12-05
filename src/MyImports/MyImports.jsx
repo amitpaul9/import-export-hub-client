@@ -73,7 +73,7 @@ const MyImports = () => {
                 imports.map(importedItem => (<div>
 
 
-                    <div className="overflow-hidden m-2 lg:m-3 md:m-3 rounded-2xl lg:text-xl md:text-xl text-[8px] rounded-2xl text-white bg-indigo-900 mb-5 py-3 px-2 items-center justify-center">
+                    <div className="overflow-hidden m-2 lg:m-3 md:m-3 rounded-2xl lg:text-xl md:text-xl text-[8px] text-white bg-indigo-900 mb-5 py-3 px-2 items-center justify-center">
 
                         <div className='flex justify-evenly gap-5 items-center'>
                             <div className=" h-12 w-12">
@@ -82,8 +82,8 @@ const MyImports = () => {
                                     alt="Avatar Tailwind CSS Component" />
                             </div>
 
-                            <div><div className="font-bold lg:text-xl md:text-xl text-xs"><h2>{importedItem.product_name}</h2></div>
-                                <div className="text-sm opacity-50"><p>Origin: {importedItem.product_origin}</p></div>
+                            <div><div className="font-bold "><h2 className='lg:text-xl md:text-xl text-[10px]'>{importedItem.product_name}</h2></div>
+                                <div className=" opacity-50 "><p className='lg:text-xl md:text-xl text-[10px]'>Origin: {importedItem.product_origin}</p></div>
                             </div>
 
                             <div><h2 className='lg:text-xl md:text-xl text-[10px]'>Quantity: {importedItem.import_quantity}</h2></div>
