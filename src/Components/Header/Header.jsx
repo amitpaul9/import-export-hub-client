@@ -44,7 +44,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link className=" text-xl" to="/"><div className=' flex justify-center items-center gap-2'><FaShoppingBag className='fill-indigo-900 w-12 h-12' /><h1 className='font-bold text-black'>Import Export Hub</h1></div></Link>
+        <Link className=" text-xl" to="/"><div className=' flex justify-center items-center gap-2'><FaShoppingBag className='ml-3 fill-indigo-900 w-9 h-9 lg:w-12 lg:h-12' /><h1 className='font-bold text-[15px] md:text-xl lg:text-xl text-black'>Import Export Hub</h1></div></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className=" menu-horizontal px-1 text-white">
@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* theme toggle */}
-      <div className='navbar-end flex gap-12 lg:gap-3 items-center'>
+      <div className='navbar-end flex gap-12 md:gap-0 lg:gap-3 items-center'>
         <div className='text-center'>
           <label className=" toggle toggle-xs lg:toggle-lg  text-base-content">
             <input
