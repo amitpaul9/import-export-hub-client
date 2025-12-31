@@ -66,7 +66,7 @@ MongoDB
 Firebase Project
 
 ## Clone the Repository
-git clone https://github.com/amitpaul9/Blood-donation-application-client
+git clone https://github.com/amitpaul9/import-export-hub-client
 </br>
 cd your-repo-name
 
@@ -90,4 +90,4 @@ npm run start
 ## 🔒 **Security Features**
 
 - **Authentication Required** - Protected routes for authenticated users only
-- \*\*
+
