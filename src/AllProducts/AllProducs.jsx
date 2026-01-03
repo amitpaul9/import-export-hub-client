@@ -11,6 +11,7 @@ const AllProducs = () => {
     const [hasMore, setHasMore] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
     const ITEMS_PER_PAGE = 8;
+    const [sortBy, setSortBy] = useState("");
 
 
 
@@ -23,7 +24,24 @@ const AllProducs = () => {
         setHasMore(true);
     }
 
-    const filteredProducts = products.filter(product => product.productName?.toLowerCase().includes(search.toLowerCase()))
+    let filteredProducts = products.filter(product => product.productName?.toLowerCase().includes(search.toLowerCase()))
+
+    if (sortBy === "price-low") {
+        filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
+    } else if (sortBy === "price-high") {
+        filteredProducts = [...filteredProducts].sort((a, b) => b.price - a.price);
+    } else if (sortBy === "rating-low") {
+        filteredProducts = [...filteredProducts].sort((a, b) => a.rating - b.rating);
+    } else if (sortBy === "rating-high") {
+        filteredProducts = [...filteredProducts].sort((a, b) => b.rating - a.rating);
+    }
+
+    const handleSort = (e) => {
+        setSortBy(e.target.value);
+
+        setCurrentIndex(0);
+        setHasMore(true);
+    }
 
 
     useEffect(() => {
@@ -46,7 +64,9 @@ const AllProducs = () => {
         setDisplayedProducts(filteredProducts.slice(0, ITEMS_PER_PAGE));
         setCurrentIndex(ITEMS_PER_PAGE);
         setHasMore(filteredProducts.length > ITEMS_PER_PAGE);
-    }, [search]);
+    }, [search, sortBy]);
+
+
 
 
     const fetchMoreData = () => {
@@ -108,7 +128,17 @@ const AllProducs = () => {
             <title>All Products - IE Hub</title>
             <h1 className='text-2xl text-indigo-900 font-bold mt-5 underline'>All Available Products</h1>
             <div className='flex  items-center justify-between lg:px-[150px] w-full '>
-                <div> <h1 className='font-bold text-[12px] md:text-xl lg:text-xl '>Available Products: <span className='text-indigo-900'>{products.length}</span></h1></div>
+                <div> <select
+                    onChange={handleSort}
+                    value={sortBy}
+                    className="select select-bordered w-full max-w-xs"
+                >
+                    <option value="">Sort By</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating-low">Rating: Low to High</option>
+                    <option value="rating-high">Rating: High to Low</option>
+                </select></div>
 
                 <div>
                     <label className="input">
