@@ -7,12 +7,12 @@ import { Link } from 'react-router';
 
 const HeroBanner = () => {
     return (
-        <div className='flex lg:flex-row flex-col-reverse gap-3 p-10  w-full justify-between'>
+        <div className='flex lg:flex-row flex-col-reverse gap-3 p-10  w-full justify-between '>
             <div className='mt-5'>
                 <h1 className='font-extrabold text-3xl text-black'>Trade Globally, Grow Locall | Connect <br /> with verified suppliers & buyers </h1>
                 <p className='mt-2 text-[#1a237e80]'>"Expand your business globally. Find verified suppliers, reach new customers, trade with confidence."</p>
                 <div className='flex gap-5 items-center pt-6'>
-                    <Link to='/' className='btn rounded-4xl bg-gradient-to-r  from-gray-900 to-indigo-900 px-7 hover:bg-white hover:border-indigo-900 hover:text-white text-white '>Explore</Link>
+                    <Link to='/allproducts' className='btn rounded-4xl bg-gradient-to-r  from-gray-900 to-indigo-900 px-7 hover:bg-white hover:border-indigo-900 hover:text-white text-white '>Explore</Link>
                     <h3 className='btn rounded-4xl border-indigo-900 px-7 text-indigo-900 hover:bg-indigo-900 hover:text-white hover:border-none bg-white'>Learn More</h3>
                 </div>
                 <div className="divider mt-5"></div>
