@@ -32,7 +32,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className="navbar shadow-sm bg-white text-black rounded-b-2xl rounded-br-2xl p-5" >
+    <div className="navbar sticky top-0 z-50 shadow-sm bg-white text-black rounded-b-2xl rounded-br-2xl p-5" >
       <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} className="lg:hidden">
