@@ -59,7 +59,35 @@ A modern web platform that simplifies global trade management. Users can browse 
 - **MongoDB** - NoSQL database for flexible data storage
 - **CORS** - Cross-origin resource sharing enabled
 
+  ⚙️ Installation & Setup
+Prerequisites
+Node.js
+MongoDB
+Firebase Project
+
+## Clone the Repository
+git clone https://github.com/amitpaul9/import-export-hub-client
+</br>
+cd your-repo-name
+
+## Install Dependencies
+
+## Frontend
+
+cd client
+npm install
+npm run dev
+
+
+## Backend
+git clone https://github.com/amitpaul9/import-export-hub-server </br>
+cd server
+npm install
+npm run start
+
+---
+
 ## 🔒 **Security Features**
 
 - **Authentication Required** - Protected routes for authenticated users only
-- \*\*
+
