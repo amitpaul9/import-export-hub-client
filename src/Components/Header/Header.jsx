@@ -22,6 +22,7 @@ const Navbar = () => {
       .catch(error => console.log(error.message))
   }
 
+
   const links = [
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/">Home</NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/allproducts">All Products</NavLink></li>,
