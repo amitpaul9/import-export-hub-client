@@ -27,7 +27,7 @@ const Testimonial = () => {
         <div>
             <section
                 id="testimonials"
-                className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8"
+                className="py-5 sm:py-16 md:py-10 lg:py-10 px-4 sm:px-6 lg:px-8"
             >
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-10 sm:mb-12 md:mb-16 lg:mb-20">
