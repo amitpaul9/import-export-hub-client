@@ -11,6 +11,8 @@ const Login = () => {
     const [showpass, setShowpass] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState("");
+    const [email, setEmail] = useState("");
+    const [pass, setPass] = useState("");
 
     const { signInUser, signinwithGoogle } = useContext(ImportExportHubContext);
     const location = useLocation();
@@ -25,6 +27,10 @@ const Login = () => {
         setShowpass(!showpass);
     };
 
+    const handleDemoUser = () => {
+        setEmail("mr@bean.com")
+        setPass("Aaaaaa")
+    }
     // login 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -67,6 +73,7 @@ const Login = () => {
 
 
 
+
     return (
         <div className=''>
             <title>Login - IE Hub</title>
@@ -84,19 +91,22 @@ const Login = () => {
                                         {/* email  */}
                                         <label className="label">Email</label>
                                         <input
+                                            onChange={(e) => setEmail(e.target.value)}
                                             type="email"
                                             className="input bg-white"
                                             ref={emailref}
                                             name="email"
+                                            value={email}
 
                                         />
                                         {/* password  */}
                                         <label className="label">Password</label>
                                         <div className="relative">
                                             <input
+                                                onChange={(e) => setPass(e.target.value)}
                                                 type={showpass ? "text" : "password"}
                                                 className="input bg-white"
-
+                                                value={pass}
                                                 name="password"
                                             />
                                             <div
@@ -129,11 +139,13 @@ const Login = () => {
                                     </Link>
                                 </p>
                             </div>
-
+                            <div className='flex justify-center'><button className='btn' onClick={handleDemoUser}>Demo User Login</button></div>
                         </div>
                         <img className='max-w-sm rounded-2xl hidden md:block lg:block' src="/public/assets/loginpic.png" alt="" />
                     </div>
+
                 </div>
+
             </div>
 
 

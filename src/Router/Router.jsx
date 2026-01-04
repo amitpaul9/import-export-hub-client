@@ -13,6 +13,7 @@ import ErrorPage from "../ErrorPage/ErrorPage.jsx";
 import DashboardLayout from "../Components/Dashboard/DashboardLayout/DashboardLayout.jsx";
 import DashboardHome from "../Components/DashboardHome/DashboardHome.jsx";
 import ProfilePage from "../Components/ProfilePage/ProfilePage.jsx";
+import Policy from "../Components/Policy/Policy.jsx";
 
 
 export const router = createBrowserRouter([
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
         path: "/allproducts",
         Component: AllProducs
       },
+      {
+        path: "/policy",
+        Component: Policy
+      }
 
 
     ]

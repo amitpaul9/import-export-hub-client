@@ -33,19 +33,19 @@ const Footer = () => {
                     <div className="sm:col-span-2 lg:col-span-1">
                         <h3 className="text-white text-base font-semibold mb-3">Follow Us</h3>
                         <div className="flex space-x-4">
-                            <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="Facebook">
+                            <a href="https://www.facebook.com" className="hover:text-indigo-400 transition-colors" aria-label="Facebook">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="Twitter">
+                            <a href="https://www.x.com/" className="hover:text-indigo-400 transition-colors" aria-label="Twitter">
                                 <FaXTwitter size={20} />
                             </a>
-                            <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="Instagram">
+                            <a href="https://www.instagram.com/" className="hover:text-indigo-400 transition-colors" aria-label="Instagram">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/" className="hover:text-indigo-400 transition-colors" aria-label="LinkedIn">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="Github">
+                            <a href="https://www.github.com/" className="hover:text-indigo-400 transition-colors" aria-label="Github">
                                 <Github size={20} />
                             </a>
                         </div>

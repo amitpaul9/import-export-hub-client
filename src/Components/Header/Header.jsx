@@ -5,7 +5,7 @@ import { FaShoppingBag } from 'react-icons/fa';
 import { CiLogout, CiShoppingCart } from 'react-icons/ci';
 import { CgProfile } from 'react-icons/cg';
 import { IoHomeOutline } from 'react-icons/io5';
-import { MdDashboard, MdOutlineProductionQuantityLimits } from 'react-icons/md';
+import { MdDashboard, MdOutlinePolicy, MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { RxDashboard } from 'react-icons/rx';
 import { LuShoppingCart } from 'react-icons/lu';
 
@@ -31,7 +31,7 @@ const Navbar = () => {
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/" className="flex justify-center items-center"><span><IoHomeOutline className='h-5 w-5' /> </span> <p className='ml-1'>  Home</p></NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/allproducts" className="flex justify-center items-center"><span><LuShoppingCart className='h-5 w-5' /></span><p className='ml-1'>All Products</p></NavLink></li>,
     <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white   text-black'><NavLink to="/dashboard" className="flex justify-center items-center"> <span><RxDashboard className='h-5 w-5' /></span> <p className='ml-1'>Dashboard</p></NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black'><NavLink to="/">Our Policies</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black'><NavLink to="/policy" className="flex justify-center items-center"><span><MdOutlinePolicy className='h-5 w-5' /></span><p className='ml-1'>Our Policies</p></NavLink></li>,
 
 
   ]
