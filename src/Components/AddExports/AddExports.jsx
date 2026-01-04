@@ -50,7 +50,7 @@ const AddExports = () => {
             <title>Add Exports - IE Hub</title>
             <h1 className="fieldset-legend text-2xl">Add to Export</h1>
             <form onSubmit={handleAddExports}>
-                <fieldset className="fieldset bg-white border-base-300 rounded-box  lg:w-lg md:w-lg border p-4">
+                <fieldset className="fieldset bg-white border-base-300 rounded-box w-full lg:w-lg md:w-lg border p-4">
 
                     <label className="label">Product Name</label>
                     <input type="text" name='name' className="input w-full" placeholder="Your product name" />

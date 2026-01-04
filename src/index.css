@@ -13,10 +13,6 @@ label {
   margin-top: 10px;
 }
 
-input::placeholder {
-  color: #344e4130;
-}
-
 li a {
   position: relative;
   text-decoration: none;
@@ -43,25 +39,100 @@ li a.active::after {
   }
 }
 
-[data-theme="synthwave"] body {
-  background-color: black;
-  color: gray;
-}
-
+/* Light Mode */
 [data-theme="light"] body {
   background-color: #ffffff;
   color: #000000;
 }
+[data-theme="light"] input::placeholder {
+  color: gray;
+}
 
-[data-theme="synthwave"] h1 {
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3 {
   color: #1a237e;
 }
 
-[data-theme="synthwave"] .navbar {
-  background-color: black;
-  color: white;
+[data-theme="light"] .navbar {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 [data-theme="light"] li {
   color: #000000;
+}
+
+[data-theme="light"] aside {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+/* Dark Mode (Synthwave) */
+[data-theme="synthwave"] body {
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+}
+
+[data-theme="synthwave"] input::placeholder {
+  color: white;
+}
+
+[data-theme="synthwave"] h1,
+[data-theme="synthwave"] h2,
+[data-theme="synthwave"] h3 {
+  color: #a78bfa;
+}
+
+[data-theme="synthwave"] .navbar {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+[data-theme="synthwave"] li {
+  color: #e0e0e0;
+}
+
+[data-theme="synthwave"] aside {
+  background-color: #1a1a1a;
+  border-color: #2d2d2d;
+}
+
+[data-theme="synthwave"] .card,
+[data-theme="synthwave"] .bg-white {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0;
+}
+
+[data-theme="synthwave"] .bg-gray-50 {
+  background-color: #0f0f0f !important;
+}
+
+[data-theme="synthwave"] .text-gray-700 {
+  color: #d1d5db !important;
+}
+
+[data-theme="synthwave"] .text-gray-600 {
+  color: #9ca3af !important;
+}
+
+[data-theme="synthwave"] .border-gray-200 {
+  border-color: #2d2d2d !important;
+}
+
+[data-theme="synthwave"] table {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+[data-theme="synthwave"] tbody tr:hover {
+  background-color: #2d2d2d !important;
+}
+
+[data-theme="synthwave"] input,
+[data-theme="synthwave"] select,
+[data-theme="synthwave"] textarea {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #404040;
 }

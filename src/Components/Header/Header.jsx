@@ -2,8 +2,12 @@ import React, { useContext } from 'react';
 import { ImportExportHubContext } from '../../../Contexts/importExportHubContext';
 import { Link, NavLink } from 'react-router';
 import { FaShoppingBag } from 'react-icons/fa';
-import { CiLogout } from 'react-icons/ci';
+import { CiLogout, CiShoppingCart } from 'react-icons/ci';
 import { CgProfile } from 'react-icons/cg';
+import { IoHomeOutline } from 'react-icons/io5';
+import { MdDashboard, MdOutlineProductionQuantityLimits } from 'react-icons/md';
+import { RxDashboard } from 'react-icons/rx';
+import { LuShoppingCart } from 'react-icons/lu';
 
 
 
@@ -24,11 +28,11 @@ const Navbar = () => {
 
 
   const links = [
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/">Home</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/allproducts">All Products</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white   text-black'><NavLink to='/myexports'>My Exports</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white   text-black'><NavLink to="/myimports">My Imports</NavLink></li>,
-    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black'><NavLink to="/addtoexport">Add Export</NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/" className="flex justify-center items-center"><span><IoHomeOutline className='h-5 w-5' /> </span> <p className='ml-1'>  Home</p></NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black '><NavLink to="/allproducts" className="flex justify-center items-center"><span><LuShoppingCart className='h-5 w-5' /></span><p className='ml-1'>All Products</p></NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white   text-black'><NavLink to="/dashboard" className="flex justify-center items-center"> <span><RxDashboard className='h-5 w-5' /></span> <p className='ml-1'>Dashboard</p></NavLink></li>,
+    <li className='mr-4 hover:transform-3d hover:text-indigo-900 lg:text-white  text-black'><NavLink to="/">Our Policies</NavLink></li>,
+
 
   ]
 
@@ -81,7 +85,9 @@ const Navbar = () => {
             <div tabIndex={0} className=" mr-5 border-2 border-indigo-900 rounded-full"><img className='h-12 w-12 rounded-full' src={user.photoURL} alt="" /></div>
             <ul tabIndex="-1" className="dropdown-content menu bg-indigo-900 text-white font-bold roundedP-box z-1 w-52 p-2 shadow-sm">
               <li><Link to="/"><CgProfile /> {user.displayName}</Link></li>
+              <li><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
               <li><Link onClick={handleSignOut}><CiLogout /> Logout</Link></li>
+
             </ul>
           </div></div>
           : <div className="navbar-end ">

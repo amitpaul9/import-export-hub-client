@@ -53,7 +53,7 @@ const RecentProducts = () => {
 
     }
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-5'>
 
             {products.map(product => <div className=" card bg-base-100 w-90 md:w-96 lg:w-96 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-indigo-900 hover:text-white cursor-pointer">
                 <figure>
